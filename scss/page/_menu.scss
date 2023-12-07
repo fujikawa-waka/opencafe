@@ -1,0 +1,126 @@
+@charset "utf-8";
+@use "../common" as *;
+
+.l-menu {
+    max-width: 1100px;
+    width: 100%;
+    margin: 50px auto;
+
+    @include mq('sp') {
+        padding: 0 20px;
+    }
+
+}
+
+.menu-page-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.menu-page-item {
+    width: calc((100% - (30px*3)) / 4);
+    margin: 30px 30px 0 0;
+
+    @include mq('pc') {
+        &:nth-child(4n + 4) {
+            margin-right: 0;
+        }
+    }
+
+    @include mq('sp') {
+        width: calc(50% - 5px);
+        margin-right: 10px;
+
+        &:nth-of-type(2n) {
+            margin-right: 0;
+        }
+    }
+}
+
+.menu-style {
+    text-align: center;
+}
+
+.menu-first-view {
+    @include pageHead(url(/img/img_firstview_menu.jpg));
+}
+
+.head {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.bg-line {
+    position: relative;
+
+    &::before {
+        content: "";
+        display: block;
+        border: 1px solid #fff;
+        width: 98%;
+        height: 85%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+    }
+
+    &::after {
+        content: "";
+        display: block;
+        border: 1px solid #fff;
+        width: 97%;
+        height: 80%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+    }
+}
+
+.menu-tab-block {
+    width: 100%;
+}
+
+.menu-tab-list {
+    text-align: center;
+    margin: 50px 0 82px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+
+    @include mq('sp') {
+        margin: 96px 0 64px;
+        justify-content: space-between;
+    }
+}
+
+.menu-btn {
+    width: 200px;
+    height: 72px;
+    margin-right: 20px;
+    background-color: #888888;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: 1px solid #fff;
+    outline-offset: -5px;
+    color: #fff;
+
+    @include mq('sp') {
+        width: calc(50% - 6px);
+        margin-top: 10px;
+        margin-right: 0;
+    }
+}
+
+.menu-button__style {
+    display: block;
+
+
+}

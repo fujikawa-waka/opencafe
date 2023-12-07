@@ -1,0 +1,39 @@
+@charset "utf-8";
+@use "../common" as *;
+
+.access-first-view {
+    @include pageHead(url(/img/img_firstview_shop.jpg));
+}
+
+.p-access-inner {
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 0 40px;
+
+    @include mq('sp') {
+        padding: 0 20px;
+    }
+}
+
+.l-access__shoplist {
+    padding-top: 40px;
+}
+
+.access__shop-name {
+    font-size: 24px;
+    font-weight: 700;
+    padding-left: 16px;
+    margin-bottom: 20px;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 3px;
+        height: 24px;
+        background-color: #222;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+    }
+}

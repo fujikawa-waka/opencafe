@@ -1,0 +1,63 @@
+//font
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Damion&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+
+$font-ja: 'Noto Serif JP', serif;
+$nav-font: 'Patua One', cursive;
+$font-title-en: 'Amatic SC', cursive;
+$sub-font-en: 'Damion', cursive;
+
+//color
+$main-color: #F3EFEB;
+$sub-color: #EAE0D5;
+$bg-color: #EAE0D5;
+
+//font-color
+$text-color: #222222;
+
+//button
+$btn-color: #222222;
+
+//inner
+$layout-inner: 1100px;
+
+//menu-button
+.p-button {
+    width: 280px;
+}
+
+.c-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #000;
+    border-right: 1px solid #000;
+    font-size: 14px;
+    text-decoration: none;
+    position: relative;
+}
+
+.c-button span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+    background: #222;
+    color: #fff;
+    box-sizing: border-box;
+    position: absolute;
+    top: -6px;
+    left: -6px;
+    transition: ease .3s;
+}
+
+.c-button:hover span {
+    left: -1px;
+    top: -1px;
+}

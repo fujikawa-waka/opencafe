@@ -1,0 +1,159 @@
+@use "./mixin" as *;
+
+.header-container {
+    width: 100%;
+    height: 100%;
+}
+
+@include mq('sp') {
+    .fixed-wrap__logo {
+        background: url(/img/logo_dark.svg)no-repeat left center /cover;
+        background-size: 100% auto;
+        width: 120px;
+        height: 70px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 2;
+    }
+}
+
+.header-menu-button {
+    position: fixed;
+    top: 8px;
+    right: 8px;
+    z-index: 30;
+
+    @include mq('pc'){
+        display: none;
+    }
+}
+
+//hamburger
+
+.hamburger-nav {
+    position: fixed;
+    right: 0;
+    top: 0;
+    transform: translateX(100%);
+    background-color: #382620;
+    padding: 10px 0 0 10px;
+    width: 40%;
+    height: 100vh;
+    z-index: 30;
+    transition: ease .4s;
+
+    @include mq('sp') {
+        width: 100%;
+    }
+}
+
+.p-ham-item-list {
+    margin: 0 0 36px 45px;
+}
+
+.hamburger-nav__link {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-size: 24px;
+
+    span {
+        font-size: 10px;
+    }
+}
+
+.header__hamburger {
+    width: 60px;
+    height: 60px;
+    background-color: #382620;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    z-index: 30;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    
+}
+
+.hamburger span {
+    width: 50%;
+    margin-left: 15px;
+    height: 2px;
+    background-color: #fff;
+    position: relative;
+    transition: ease .4s;
+    /*ハンバーガーメニュークリック時の三本線の動きを遅延*/
+    display: block;
+
+    &:nth-child(1) {
+        top: 0;
+
+    }
+
+    &:nth-child(2) {
+        margin: 8px 0 8px 15px;
+    }
+
+    &:nth-child(3) {
+        top: 0;
+    }
+
+}
+
+.hamburger-nav.active {
+    transform: translateX(0);
+}
+
+.header__hamburger.active {
+    background: #fff;
+}
+
+.hamburger.active span:nth-child(1) {
+    top: 7px;
+    transform: rotate(45deg);
+    background-color: #382620;
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+    background-color: #382620;
+}
+
+.hamburger.active span:nth-child(3) {
+    top: -13px;
+    transform: rotate(-45deg);
+    background-color: #382620;
+}
+
+.hamburger-cover {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    background-color: #222;
+    opacity: 0;
+    transition: all .5s;
+    z-index: 20;
+    pointer-events: none;
+
+    &.open {
+        opacity: .5;
+
+    }
+}
+
+.twitter-light {
+    background: url(/img/icon_twitter-light.png)no-repeat center;
+}
+
+.instagram-light {
+    background: url(/img/icon_instagram-light.png)no-repeat center;
+ 
+}
+
+.youtube-light {
+    background: url(/img/icon_youtube-light.png)no-repeat center;
+}

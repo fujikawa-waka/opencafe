@@ -1,0 +1,25 @@
+@use "../common/variable" as *;
+
+a {
+  color: #222;
+  transition: ease .5s;
+
+  &:hover {
+    opacity: .7;
+  }
+}
+
+body {
+  font-family: $font-ja;
+  color: $text-color;
+  background: $main-color;
+  overflow-x: hidden;
+}
+
+.l-wrapper {
+  overflow: hidden;
+}
+
+.inner {
+  max-width: $layout-inner;
+}
